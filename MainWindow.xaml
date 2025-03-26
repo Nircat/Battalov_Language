@@ -1,0 +1,21 @@
+﻿<Window x:Class="Батталов_школа.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Батталов_школа"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" FontFamily="Comic Sans MS" Icon="Клиенты/school_logo.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Label  Background="#e7fabf" />
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1"/>
+        <Image Source="/Клиенты/school_logo.ico" HorizontalAlignment="Left" />
+        <TextBlock Text="Батталов Языковая школа" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Name="Back" Content="Назад" Click="Back_Click" HorizontalAlignment="Right" />
+    </Grid>
+</Window>
