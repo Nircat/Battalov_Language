@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Батталов_школа"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="LanguagePage" FontFamily="Comic Sans MS">
+      Title="LanguagePage" FontFamily="Comic Sans MS" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -14,6 +14,21 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <WrapPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock Text="Поиск" FontSize="15" Margin="5"/>
+            <TextBox Name="BoxSerch" Width="175" Margin="5" TextChanged="BoxSerch_TextChanged"/>
+            <TextBlock Text="Пол" FontSize="15" Margin="5"/>
+            <ComboBox Name="ComboGender" FontSize="15" Margin="5" SelectionChanged="ComboGender_SelectionChanged">
+                <ComboBoxItem Content="Все" IsSelected="True"/>
+                <ComboBoxItem Content="Мужчины"/>
+                <ComboBoxItem Content="Женщины"/>
+            </ComboBox>
+            <TextBlock Text="Сортировка" FontSize="15" Margin="5"/>
+            <ComboBox Name="ComboSort" FontSize="15" Margin="5" SelectionChanged="ComboSort_SelectionChanged">
+                <ComboBoxItem Content="Нет" IsSelected="True"/>
+                <ComboBoxItem Content="По фамилии от А до Я"/>
+                <ComboBoxItem Content="По дате последнего посещения"/>
+                <ComboBoxItem Content="По количесву посещений"/>
+            </ComboBox>
             <TextBlock Name="PageCountAllBlock" FontSize="20"/>
             <ComboBox FontSize="15" Margin="5" Name="LanguagePageCombo" SelectionChanged="LanguagePageCombo_SelectionChanged" >
                 <ComboBoxItem Content="По 10 записей" IsSelected="True"/>
