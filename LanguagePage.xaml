@@ -82,9 +82,9 @@
                             <TextBlock Text="{Binding Phone, StringFormat='Телефон: {0}'}" FontSize="15"/>
                             <TextBlock Text="{Binding Email, StringFormat=' Email = {0}'}" FontSize="15"/>
                         </WrapPanel>
-                        <TextBlock Text="{Binding RegistrationDate, StringFormat='Дата регистрации {0}'}" Grid.Row="3" Grid.Column="1" FontSize="15"/>
+                        <TextBlock Text="{Binding RegistrationDateString, StringFormat='Дата регистрации {0}'}" Grid.Row="3" Grid.Column="1" FontSize="15"/>
                         <WrapPanel Grid.Row="4" Grid.Column="1">
-                            <TextBlock Text="{Binding LastLoginDate, StringFormat='Дата последней регистрации {0}'}" FontSize="15"/>
+                            <TextBlock Text="{Binding LastLoginDate, StringFormat='Дата последнего посещения {0}'}" FontSize="15"/>
                             <TextBlock Text="{Binding CountLogin, StringFormat=' Количество заходов = {0}'}" FontSize="15"/>
                         </WrapPanel>
                         <TextBlock />

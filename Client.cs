@@ -54,6 +54,19 @@ namespace Батталов_школа
             }
         }
 
+        public System.DateTime? LastLoginDATA
+        {
+            get
+            {
+                var clientServices = ClientService.Where(p => p.ClientID == ID);
+                if (clientServices.Any())
+                {
+                    return clientServices.Max(p => p.StartTime);
+                }
+                return null;
+            }
+        }
+
         public string CountLogin
         {
             get
@@ -61,7 +74,17 @@ namespace Батталов_школа
                 return ClientService.Count(p => p.ClientID == ID).ToString();
             }
         }
-    public string Phone { get; set; }
+        public string RegistrationDateString
+        {
+            get
+            {
+                return RegistrationDate.ToShortDateString();
+            }
+
+        }
+
+
+        public string Phone { get; set; }
         public string PhotoPath { get; set; }
         public System.DateTime Birthday { get; set; }
         public string Email { get; set; }
