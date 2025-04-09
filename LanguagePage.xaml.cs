@@ -240,5 +240,16 @@ namespace Батталов_школа
                 Update();
             }
         }
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddEditPage(null));
+            Update();
+        }
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Client));
+            Update();
+        }
+
     }
 }

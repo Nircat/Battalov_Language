@@ -78,9 +78,32 @@ namespace Батталов_школа
         {
             get
             {
-                return RegistrationDate.ToShortDateString();
-            }
+                if (this.RegistrationDate != null)
+                {
+                    return this.RegistrationDate.ToShortDateString();
+                }
 
+
+                else
+                {
+                    return "";
+                }
+
+            }
+        }
+        public string Birthstring
+        {
+            get
+            {
+                if (this.Birthday != null)
+                {
+                    return this.Birthday.ToShortDateString();
+                }
+                else
+                {
+                    return System.DateTime.Today.ToShortDateString();
+                }
+            }
         }
 
 

@@ -14,6 +14,7 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <WrapPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Name="Add" Content="Добавить" Click="Add_Click" Margin="5" FontSize="15"></Button>
             <TextBlock Text="Поиск" FontSize="15" Margin="5"/>
             <TextBox Name="BoxSerch" Width="175" Margin="5" TextChanged="BoxSerch_TextChanged"/>
             <TextBlock Text="Пол" FontSize="15" Margin="5"/>
@@ -68,7 +69,8 @@
                             </Image.Source>
                         </Image>
                         <Button Name="DeleteButton" Grid.Column="2" Content="Удалить" Click="DeleteButton_Click" Grid.RowSpan="5"/>
-                        <WrapPanel Grid.Row="0" Orientation="Horizontal" Grid.Column="1">
+                        <Button  Grid.Row="4" HorizontalAlignment="Center" Grid.Column="2" Name="Edit" Content="Редактировать" Click="Edit_Click"/>
+                            <WrapPanel Grid.Row="0" Orientation="Horizontal" Grid.Column="1">
                             <TextBlock Text="{Binding ID, StringFormat='ID = {0} '}" FontSize="15"/>
                             <TextBlock Text="{Binding FirstName, StringFormat = ' {0}'}" FontSize="15"/>
                             <TextBlock Text="{Binding LastName,StringFormat = ' {0} '}" FontSize="15"/>
@@ -76,7 +78,7 @@
                         </WrapPanel>
                         <WrapPanel Grid.Row="1" Grid.Column="1" >
                             <TextBlock Text="{Binding GenderCodeString, StringFormat='Пол {0}'}" FontSize="15"/>
-                            <TextBlock Text="{Binding Birthday, StringFormat=' Дата Рождения = {0}'}" FontSize="15"/>
+                            <TextBlock Text="{Binding Birthstring, StringFormat=' Дата Рождения = {0}'}" FontSize="15"/>
                         </WrapPanel>
                         <WrapPanel Grid.Row="2" Grid.Column="1">
                             <TextBlock Text="{Binding Phone, StringFormat='Телефон: {0}'}" FontSize="15"/>

@@ -64,6 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddEditPage.xaml.cs">
+      <DependentUpon>AddEditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BattalovModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -102,6 +105,10 @@
     <Compile Include="Tag.cs">
       <DependentUpon>BattalovModel.tt</DependentUpon>
     </Compile>
+    <Page Include="AddEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LanguagePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -286,6 +293,7 @@
       <DependentUpon>BattalovModel.edmx</DependentUpon>
       <LastGenOutput>BattalovModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Клиенты\picture.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
